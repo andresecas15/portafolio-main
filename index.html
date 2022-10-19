@@ -163,7 +163,16 @@
 						<fieldset>
 							<label for="message">Mensaje</label>
 							<textarea id="message" placeholder="Escribe tu mensaje" required></textarea>
+							<p># de caracteres en mensaje: <span id="counter"></span></p>
+
+							<script type="text/javascript">
+									function count(){
+										document.getElementById("counter").textContent = document.getElementById("message").value.length;
+									}
+									document.getElementById("message").addEventListener("input", count);
+							</script>
 						</fieldset>
+										
 						<button type="submit" class="is-block">Enviar</button>
 					</form>
 				</div>
